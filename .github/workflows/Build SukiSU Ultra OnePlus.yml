@@ -101,7 +101,7 @@ on:
         type: boolean
         description: "是否启用添加更多的ZRAM算法？"
         required: true
-        default: true
+        default: false
   schedule:
    - cron: '0 */8 * * *'  # 每8小时定时触发
 
@@ -119,7 +119,7 @@ jobs:
       SUSFS_CI: ${{ github.event.inputs.SUSFS_CI || 'true' }}
       VFS: ${{ github.event.inputs.VFS || 'true' }}
       KPM: ${{ github.event.inputs.KPM || 'true' }}
-      ZRAM: ${{ github.event.inputs.ZRAM || 'true' }}
+      ZRAM: ${{ github.event.inputs.ZRAM || 'false' }}
 
     steps:
       - name: Maximize build space
