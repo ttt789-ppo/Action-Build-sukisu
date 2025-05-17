@@ -110,16 +110,16 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # 定义默认环境变量，定时触发时使用默认值，手动触发时使用输入值
-      CPU: ${{ github.event.inputs.CPU || 'sm8550' }}
-      FEIL: ${{ github.event.inputs.FEIL || 'oneplus_ace2pro_v' }}
-      CPUD: ${{ github.event.inputs.CPUD || 'kalama' }}
-      ANDROID_VERSION: ${{ github.event.inputs.ANDROID_VERSION || 'android13' }}
-      KERNEL_VERSION: ${{ github.event.inputs.KERNEL_VERSION || '5.15' }}
+      CPU: ${{ github.event.inputs.CPU || 'sm8650' }}
+      FEIL: ${{ github.event.inputs.FEIL || 'oneplus_ace5' }}
+      CPUD: ${{ github.event.inputs.CPUD || 'pineapple' }}
+      ANDROID_VERSION: ${{ github.event.inputs.ANDROID_VERSION || 'android14' }}
+      KERNEL_VERSION: ${{ github.event.inputs.KERNEL_VERSION || '6.1' }}
       BUILD_METHOD: ${{ github.event.inputs.BUILD_METHOD || 'gki' }}
       SUSFS_CI: ${{ github.event.inputs.SUSFS_CI || 'true' }}
       VFS: ${{ github.event.inputs.VFS || 'true' }}
       KPM: ${{ github.event.inputs.KPM || 'true' }}
-      ZRAM: ${{ github.event.inputs.ZRAM || 'false' }}
+      ZRAM: ${{ github.event.inputs.ZRAM || 'true' }}
 
     steps:
       - name: Maximize build space
