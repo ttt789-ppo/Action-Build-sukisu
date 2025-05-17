@@ -103,7 +103,7 @@ on:
         required: true
         default: true
   schedule:
-    - cron: '0 */8 * * *'  # 每8小时定时触发
+   - cron: '0 */8 * * *'  # 每8小时定时触发
 
 jobs:
   build:
